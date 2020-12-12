@@ -23893,6 +23893,19 @@ $("#unitdefenderfilter").on("keyup", function() {
   var value = $(this).val().toLowerCase();
   let headers = $("#unitmeleetable th");
   var filteredColumns = []
+
+  $("#unitmeleetable th").filter(function() {
+    $(this).show();
+  });
+
+  $("#unitmeleetable td").filter(function() {
+    $(this).show();
+  });
+
+  if (value.trim() == ""){
+    return;
+  }
+
   for (const item of headers) {
     if (item.innerText != "Unit" && item.innerText.toLowerCase().indexOf(value) == -1){
       item.style.display = "None";
