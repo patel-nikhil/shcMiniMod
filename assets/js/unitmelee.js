@@ -23809,8 +23809,6 @@ function loadUnitMeleeTable(){
       }
       body.append(row);
     }
-
-
     table.append(body);
     return table;
 }
