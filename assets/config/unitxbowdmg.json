@@ -1,0 +1,464 @@
+[
+    {
+        "description": "xbow_dmgpeasant",
+        "address": "0x74eeb4",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgburningman",
+        "address": "0x74eeb8",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgwoodcutter",
+        "address": "0x74eebc",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgfletcher",
+        "address": "0x74eec0",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgtunneler",
+        "address": "0x74eec4",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmghunter",
+        "address": "0x74eec8",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgquarry_mason",
+        "address": "0x74eecc",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgquarry_grunt",
+        "address": "0x74eed0",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgquarry_ox",
+        "address": "0x74eed4",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgpitchman",
+        "address": "0x74eed8",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgfarmer_wheat",
+        "address": "0x74eedc",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgfarmer_hops",
+        "address": "0x74eee0",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgfarmer_apples",
+        "address": "0x74eee4",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgfarmer_cattle",
+        "address": "0x74eee8",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgmiller",
+        "address": "0x74eeec",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgbaker",
+        "address": "0x74eef0",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgbrewer",
+        "address": "0x74eef4",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgpoleturner",
+        "address": "0x74eef8",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgblacksmith",
+        "address": "0x74eefc",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgarmourer",
+        "address": "0x74ef00",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgtanner",
+        "address": "0x74ef04",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmge_archer",
+        "address": "0x74ef08",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmge_xbow",
+        "address": "0x74ef0c",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "xbow_dmge_spear",
+        "address": "0x74ef10",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmge_pike",
+        "address": "0x74ef14",
+        "size": 4,
+        "value": 3000
+    },
+    {
+        "description": "xbow_dmge_mace",
+        "address": "0x74ef18",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "xbow_dmge_sword",
+        "address": "0x74ef1c",
+        "size": 4,
+        "value": 2200
+    },
+    {
+        "description": "xbow_dmge_knight",
+        "address": "0x74ef20",
+        "size": 4,
+        "value": 2500
+    },
+    {
+        "description": "xbow_dmge_ladder",
+        "address": "0x74ef24",
+        "size": 4,
+        "value": 2500
+    },
+    {
+        "description": "xbow_dmge_engineer",
+        "address": "0x74ef28",
+        "size": 4,
+        "value": 10000
+    },
+    {
+        "description": "xbow_dmgminer1",
+        "address": "0x74ef2c",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgminer2",
+        "address": "0x74ef30",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgpriest",
+        "address": "0x74ef34",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmghealer",
+        "address": "0x74ef38",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgdrunkard",
+        "address": "0x74ef3c",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmginnkeeper",
+        "address": "0x74ef40",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmge_monk",
+        "address": "0x74ef44",
+        "size": 4,
+        "value": 7000
+    },
+    {
+        "description": "xbow_dmg???1",
+        "address": "0x74ef48",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgs_catapult",
+        "address": "0x74ef4c",
+        "size": 4,
+        "value": 1500
+    },
+    {
+        "description": "xbow_dmgs_trebuchet",
+        "address": "0x74ef50",
+        "size": 4,
+        "value": 1000
+    },
+    {
+        "description": "xbow_dmgs_mangonel",
+        "address": "0x74ef54",
+        "size": 4,
+        "value": 1500
+    },
+    {
+        "description": "xbow_dmgtrader",
+        "address": "0x74ef58",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgtrader_horse",
+        "address": "0x74ef5c",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgdeer",
+        "address": "0x74ef60",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmglion",
+        "address": "0x74ef64",
+        "size": 4,
+        "value": 10000
+    },
+    {
+        "description": "xbow_dmgrabbit",
+        "address": "0x74ef68",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgcamel",
+        "address": "0x74ef6c",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgcrow",
+        "address": "0x74ef70",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgseagull",
+        "address": "0x74ef74",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgsiegetent",
+        "address": "0x74ef78",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgcow",
+        "address": "0x74ef7c",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgdog",
+        "address": "0x74ef80",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgfireman",
+        "address": "0x74ef84",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgghost",
+        "address": "0x74ef88",
+        "size": 4,
+        "value": 50
+    },
+    {
+        "description": "xbow_dmglord",
+        "address": "0x74ef8c",
+        "size": 4,
+        "value": 150
+    },
+    {
+        "description": "xbow_dmglady",
+        "address": "0x74ef90",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgchester",
+        "address": "0x74ef94",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgs_tower",
+        "address": "0x74ef98",
+        "size": 4,
+        "value": 8000
+    },
+    {
+        "description": "xbow_dmgs_batteringram",
+        "address": "0x74ef9c",
+        "size": 4,
+        "value": 8000
+    },
+    {
+        "description": "xbow_dmgs_shield",
+        "address": "0x74efa0",
+        "size": 4,
+        "value": 150
+    },
+    {
+        "description": "xbow_dmgs_ballista",
+        "address": "0x74efa4",
+        "size": 4,
+        "value": 3000
+    },
+    {
+        "description": "xbow_dmgchicken",
+        "address": "0x74efa8",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgmother",
+        "address": "0x74efac",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgchild",
+        "address": "0x74efb0",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgjuggler",
+        "address": "0x74efb4",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgfireeater",
+        "address": "0x74efb8",
+        "size": 4,
+        "value": 15000
+    },
+    {
+        "description": "xbow_dmgdog",
+        "address": "0x74efbc",
+        "size": 4,
+        "value": 10000
+    },
+    {
+        "description": "xbow_dmg???2",
+        "address": "0x74efc0",
+        "size": 4,
+        "value": 0
+    },
+    {
+        "description": "xbow_dmg???3",
+        "address": "0x74efc4",
+        "size": 4,
+        "value": 0
+    },
+    {
+        "description": "xbow_dmga_archer",
+        "address": "0x74efc8",
+        "size": 4,
+        "value": 10000
+    },
+    {
+        "description": "xbow_dmga_slave",
+        "address": "0x74efcc",
+        "size": 4,
+        "value": 6000
+    },
+    {
+        "description": "xbow_dmga_slinger",
+        "address": "0x74efd0",
+        "size": 4,
+        "value": 8000
+    },
+    {
+        "description": "xbow_dmga_assassin",
+        "address": "0x74efd4",
+        "size": 4,
+        "value": 8000
+    },
+    {
+        "description": "xbow_dmga_harcher",
+        "address": "0x74efd8",
+        "size": 4,
+        "value": 8000
+    },
+    {
+        "description": "xbow_dmga_sword",
+        "address": "0x74efdc",
+        "size": 4,
+        "value": 8000
+    },
+    {
+        "description": "xbow_dmga_firethrower",
+        "address": "0x74efe0",
+        "size": 4,
+        "value": 8000
+    },
+    {
+        "description": "xbow_dmgs_fballista",
+        "address": "0x74efe4",
+        "size": 4,
+        "value": 500
+    }
+]

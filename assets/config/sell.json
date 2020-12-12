@@ -1,0 +1,140 @@
+[
+    {
+        "description": "sell_wood",
+        "address": "0x2173c0",
+        "size": 4,
+        "value": 5
+    },
+    {
+        "description": "sell_hop",
+        "address": "0x2173c4",
+        "size": 4,
+        "value": 40
+    },
+    {
+        "description": "sell_stone",
+        "address": "0x2173c8",
+        "size": 4,
+        "value": 35
+    },
+    {
+        "description": "sell_blank1",
+        "address": "0x2173cc",
+        "size": 4,
+        "value": 0
+    },
+    {
+        "description": "sell_iron",
+        "address": "0x2173d0",
+        "size": 4,
+        "value": 115
+    },
+    {
+        "description": "sell_pitch",
+        "address": "0x2173d4",
+        "size": 4,
+        "value": 50
+    },
+    {
+        "description": "sell_blank2",
+        "address": "0x2173d8",
+        "size": 4,
+        "value": 0
+    },
+    {
+        "description": "sell_wheat",
+        "address": "0x2173dc",
+        "size": 4,
+        "value": 40
+    },
+    {
+        "description": "sell_bread",
+        "address": "0x2173e0",
+        "size": 4,
+        "value": 20
+    },
+    {
+        "description": "sell_cheese",
+        "address": "0x2173e4",
+        "size": 4,
+        "value": 20
+    },
+    {
+        "description": "sell_meat",
+        "address": "0x2173e8",
+        "size": 4,
+        "value": 20
+    },
+    {
+        "description": "sell_fruit",
+        "address": "0x2173ec",
+        "size": 4,
+        "value": 20
+    },
+    {
+        "description": "sell_beer",
+        "address": "0x2173f0",
+        "size": 4,
+        "value": 50
+    },
+    {
+        "description": "sell_blank3",
+        "address": "0x2173f4",
+        "size": 4,
+        "value": 0
+    },
+    {
+        "description": "sell_flour",
+        "address": "0x2173f8",
+        "size": 4,
+        "value": 50
+    },
+    {
+        "description": "sell_bow",
+        "address": "0x2173fc",
+        "size": 4,
+        "value": 75
+    },
+    {
+        "description": "sell_xbow",
+        "address": "0x217400",
+        "size": 4,
+        "value": 150
+    },
+    {
+        "description": "sell_spear",
+        "address": "0x217404",
+        "size": 4,
+        "value": 50
+    },
+    {
+        "description": "sell_pike",
+        "address": "0x217408",
+        "size": 4,
+        "value": 90
+    },
+    {
+        "description": "sell_mace",
+        "address": "0x21740c",
+        "size": 4,
+        "value": 150
+    },
+    {
+        "description": "sell_sword",
+        "address": "0x217410",
+        "size": 4,
+        "value": 150
+    },
+    {
+        "description": "sell_leather",
+        "address": "0x217414",
+        "size": 4,
+        "value": 60
+    },
+    {
+        "description": "sell_armor",
+        "address": "0x217418",
+        "size": 4,
+        "value": 150
+    }
+]

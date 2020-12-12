@@ -1,0 +1,464 @@
+[
+    {
+        "description": "speed_peasant",
+        "address": "0x74e734",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_burningman",
+        "address": "0x74e738",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_woodcutter",
+        "address": "0x74e73c",
+        "size": 4,
+        "value": 2
+    },
+    {
+        "description": "speed_fletcher",
+        "address": "0x74e740",
+        "size": 4,
+        "value": 3
+    },
+    {
+        "description": "speed_tunneler",
+        "address": "0x74e744",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_hunter",
+        "address": "0x74e748",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_quarry_mason",
+        "address": "0x74e74c",
+        "size": 4,
+        "value": 2
+    },
+    {
+        "description": "speed_quarry_grunt",
+        "address": "0x74e750",
+        "size": 4,
+        "value": 2
+    },
+    {
+        "description": "speed_quarry_ox",
+        "address": "0x74e754",
+        "size": 4,
+        "value": 3
+    },
+    {
+        "description": "speed_pitchman",
+        "address": "0x74e758",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_farmer_wheat",
+        "address": "0x74e75c",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_farmer_hops",
+        "address": "0x74e760",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_farmer_apples",
+        "address": "0x74e764",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_farmer_cattle",
+        "address": "0x74e768",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_miller",
+        "address": "0x74e76c",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_baker",
+        "address": "0x74e770",
+        "size": 4,
+        "value": 2
+    },
+    {
+        "description": "speed_brewer",
+        "address": "0x74e774",
+        "size": 4,
+        "value": 3
+    },
+    {
+        "description": "speed_poleturner",
+        "address": "0x74e778",
+        "size": 4,
+        "value": 3
+    },
+    {
+        "description": "speed_blacksmith",
+        "address": "0x74e77c",
+        "size": 4,
+        "value": 3
+    },
+    {
+        "description": "speed_armourer",
+        "address": "0x74e780",
+        "size": 4,
+        "value": 3
+    },
+    {
+        "description": "speed_tanner",
+        "address": "0x74e784",
+        "size": 4,
+        "value": 3
+    },
+    {
+        "description": "speed_e_archer",
+        "address": "0x74e788",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_e_xbow",
+        "address": "0x74e78c",
+        "size": 4,
+        "value": 2
+    },
+    {
+        "description": "speed_e_spear",
+        "address": "0x74e790",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_e_pike",
+        "address": "0x74e794",
+        "size": 4,
+        "value": 2
+    },
+    {
+        "description": "speed_e_mace",
+        "address": "0x74e798",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_e_sword",
+        "address": "0x74e79c",
+        "size": 4,
+        "value": 4
+    },
+    {
+        "description": "speed_e_knight",
+        "address": "0x74e7a0",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_e_ladder",
+        "address": "0x74e7a4",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_e_engineer",
+        "address": "0x74e7a8",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_miner1",
+        "address": "0x74e7ac",
+        "size": 4,
+        "value": 2
+    },
+    {
+        "description": "speed_miner2",
+        "address": "0x74e7b0",
+        "size": 4,
+        "value": 2
+    },
+    {
+        "description": "speed_priest",
+        "address": "0x74e7b4",
+        "size": 4,
+        "value": 2
+    },
+    {
+        "description": "speed_healer",
+        "address": "0x74e7b8",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_drunkard",
+        "address": "0x74e7bc",
+        "size": 4,
+        "value": 5
+    },
+    {
+        "description": "speed_innkeeper",
+        "address": "0x74e7c0",
+        "size": 4,
+        "value": 3
+    },
+    {
+        "description": "speed_e_monk",
+        "address": "0x74e7c4",
+        "size": 4,
+        "value": 2
+    },
+    {
+        "description": "speed_???1",
+        "address": "0x74e7c8",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_s_catapult",
+        "address": "0x74e7cc",
+        "size": 4,
+        "value": 6
+    },
+    {
+        "description": "speed_s_trebuchet",
+        "address": "0x74e7d0",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_s_mangonel",
+        "address": "0x74e7d4",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_trader",
+        "address": "0x74e7d8",
+        "size": 4,
+        "value": 2
+    },
+    {
+        "description": "speed_trader_horse",
+        "address": "0x74e7dc",
+        "size": 4,
+        "value": 2
+    },
+    {
+        "description": "speed_deer",
+        "address": "0x74e7e0",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_lion",
+        "address": "0x74e7e4",
+        "size": 4,
+        "value": 2
+    },
+    {
+        "description": "speed_rabbit",
+        "address": "0x74e7e8",
+        "size": 4,
+        "value": 2
+    },
+    {
+        "description": "speed_camel",
+        "address": "0x74e7ec",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_crow",
+        "address": "0x74e7f0",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_seagull",
+        "address": "0x74e7f4",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_siegetent",
+        "address": "0x74e7f8",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_cow",
+        "address": "0x74e7fc",
+        "size": 4,
+        "value": 3
+    },
+    {
+        "description": "speed_dog",
+        "address": "0x74e800",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_fireman",
+        "address": "0x74e804",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_ghost",
+        "address": "0x74e808",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_lord",
+        "address": "0x74e80c",
+        "size": 4,
+        "value": 2
+    },
+    {
+        "description": "speed_lady",
+        "address": "0x74e810",
+        "size": 4,
+        "value": 5
+    },
+    {
+        "description": "speed_chester",
+        "address": "0x74e814",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_s_tower",
+        "address": "0x74e818",
+        "size": 4,
+        "value": 3
+    },
+    {
+        "description": "speed_s_batteringram",
+        "address": "0x74e81c",
+        "size": 4,
+        "value": 3
+    },
+    {
+        "description": "speed_s_shield",
+        "address": "0x74e820",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_s_ballista",
+        "address": "0x74e824",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_chicken",
+        "address": "0x74e828",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_mother",
+        "address": "0x74e82c",
+        "size": 4,
+        "value": 2
+    },
+    {
+        "description": "speed_child",
+        "address": "0x74e830",
+        "size": 4,
+        "value": 2
+    },
+    {
+        "description": "speed_juggler",
+        "address": "0x74e834",
+        "size": 4,
+        "value": 2
+    },
+    {
+        "description": "speed_fireeater",
+        "address": "0x74e838",
+        "size": 4,
+        "value": 2
+    },
+    {
+        "description": "speed_dog",
+        "address": "0x74e83c",
+        "size": 4,
+        "value": 2
+    },
+    {
+        "description": "speed_???2",
+        "address": "0x74e840",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_???3",
+        "address": "0x74e844",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_a_archer",
+        "address": "0x74e848",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_a_slave",
+        "address": "0x74e84c",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_a_slinger",
+        "address": "0x74e850",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_a_assassin",
+        "address": "0x74e854",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_a_harcher",
+        "address": "0x74e858",
+        "size": 4,
+        "value": 1
+    },
+    {
+        "description": "speed_a_sword",
+        "address": "0x74e85c",
+        "size": 4,
+        "value": 3
+    },
+    {
+        "description": "speed_a_firethrower",
+        "address": "0x74e860",
+        "size": 4,
+        "value": 2
+    },
+    {
+        "description": "speed_s_fballista",
+        "address": "0x74e864",
+        "size": 4,
+        "value": 5
+    }
+]

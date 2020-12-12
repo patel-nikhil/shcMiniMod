@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mod Program Config Editor</title>
+    <link rel="icon" type="image/jpg" href="assets/img/icon.jpg" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid page">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="assets/img/icon.jpg"><img src="assets/img/icon.jpg" style="width:50px; height:50px;"/></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html"><span class="string">About</span><span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link string" href="getting-started.html">Getting Started</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link string" href="features.html">Config Generator</a>
+                    </li>
+                </ul>
+                <div style="margin-left: 60%;"></div>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-disabled version">Crusader</button>
+                    <button type="button" class="btn btn-success version">Extreme</button>
+                </div>
+            </div>
+        </nav>
+        <div class="header">
+            <h2 class="text-center string">Welcome</h2>
+            <h4 class="text-center"><span class="string">Latest build</span>
+                    <a href="https://github.com/Sh0wdown/UnofficialCrusaderPatch"><i class="fab fa-github"></i></a>
+                    <a class="latest-release string" href="https://github.com/Sh0wdown/UnofficialCrusaderPatch/releases/tag/v2.14">Wiki</a> 
+                    <a class="latest-release string" href="https://github.com/Sh0wdown/UnofficialCrusaderPatch/releases/download/v2.14/UnofficialCrusaderPatch_v2.14.zip">Download</a>
+                </h4>
+        </div>
+        <hr class="header-divider">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" id="building-tab" href="#building" role="tab" data-toggle="tab">Buildings</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" id="buildinghealth-tab" href="#buildinghealth" role="tab" data-toggle="tab">Building Health</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" id="unitbase-tab" href="#unitbase" role="tab" data-toggle="tab">Unit Base Stats</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="unitmelee-tab" href="#unitmelee" role="tab" data-toggle="tab">Unit Melee Damage</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" id="reset-tab" href=""><button class="btn btn-danger" id="global-reset" style="margin: 0;">Reset all values</button></a>
+            </li>
+        </ul>
+          
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="building" role="tabpanel" aria-labelledby="building-tab">
+                <div id="buildingcontrols"></div>
+                <table class="table" id="buildingtable">
+
+                </table>
+            </div>
+            <div class="tab-pane fade" id="unitmelee" role="tabpanel" aria-labelledby="unitmelee-tab">
+                <div id="unitattackercontrols"></div>
+                <div id="unitdefendercontrols"></div>
+                <table class="table" id="unitmeleetable">
+
+                </table>
+            </div>
+            <!-- <div class="tab-pane fade" id="buildinghealth" role="tabpanel" aria-labelledby="buildinghealth-tab">
+                <div id="buildinghpcontrols"></div>
+                <table class="table" id="buildinghptable">
+
+                </table>
+            </div> -->
+            <div class="tab-pane fade" id="unitbase" role="tabpanel" aria-labelledby="unitbase-tab">
+                <div id="unitbasecontrols"></div>
+                <table class="table" id="unitbasetable">
+
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+<link rel="stylesheet" href="assets/css/index.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="assets/js/index.js"></script>
+<script src="assets/js/buildings.js"></script>
+<!-- <script src="assets/js/buildingcost.js"></script> -->
+<!-- <script src="assets/js/buildinghp.js"></script> -->
+<script src="assets/js/unitmelee.js"></script>
+<script src="assets/js/unitbase.js"></script>
+
+</html>

@@ -1,0 +1,644 @@
+[
+    {
+        "description": "hovel",
+        "address": "0x1ba21c",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "house",
+        "address": "0x1ba220",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "woodcuttershut",
+        "address": "0x1ba224",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "oxtether",
+        "address": "0x1ba228",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "ironmine",
+        "address": "0x1ba22c",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "pitchrig",
+        "address": "0x1ba230",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "huntershut",
+        "address": "0x1ba234",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "mercenarypost",
+        "address": "0x1ba238",
+        "size": 4,
+        "value": 300
+    },
+    {
+        "description": "barracks",
+        "address": "0x1ba23c",
+        "size": 4,
+        "value": 500
+    },
+    {
+        "description": "stockpile",
+        "address": "0x1ba240",
+        "size": 4,
+        "value": 500
+    },
+    {
+        "description": "armory",
+        "address": "0x1ba244",
+        "size": 4,
+        "value": 500
+    },
+    {
+        "description": "fletcher",
+        "address": "0x1ba248",
+        "size": 4,
+        "value": 300
+    },
+    {
+        "description": "blacksmith",
+        "address": "0x1ba24c",
+        "size": 4,
+        "value": 300
+    },
+    {
+        "description": "poleturner",
+        "address": "0x1ba250",
+        "size": 4,
+        "value": 300
+    },
+    {
+        "description": "armourer",
+        "address": "0x1ba254",
+        "size": 4,
+        "value": 300
+    },
+    {
+        "description": "tanner",
+        "address": "0x1ba258",
+        "size": 4,
+        "value": 300
+    },
+    {
+        "description": "bakery",
+        "address": "0x1ba25c",
+        "size": 4,
+        "value": 300
+    },
+    {
+        "description": "brewery",
+        "address": "0x1ba260",
+        "size": 4,
+        "value": 300
+    },
+    {
+        "description": "granary",
+        "address": "0x1ba264",
+        "size": 4,
+        "value": 300
+    },
+    {
+        "description": "quarry",
+        "address": "0x1ba268",
+        "size": 4,
+        "value": 300
+    },
+    {
+        "description": "quarrypile",
+        "address": "0x1ba26c",
+        "size": 4,
+        "value": 0
+    },
+    {
+        "description": "inn",
+        "address": "0x1ba270",
+        "size": 4,
+        "value": 300
+    },
+    {
+        "description": "apothecary",
+        "address": "0x1ba274",
+        "size": 4,
+        "value": 300
+    },
+    {
+        "description": "engineerguild",
+        "address": "0x1ba278",
+        "size": 4,
+        "value": 500
+    },
+    {
+        "description": "tunnelerguild",
+        "address": "0x1ba27c",
+        "size": 4,
+        "value": 500
+    },
+    {
+        "description": "marketplace",
+        "address": "0x1ba280",
+        "size": 4,
+        "value": 300
+    },
+    {
+        "description": "well",
+        "address": "0x1ba284",
+        "size": 4,
+        "value": 300
+    },
+    {
+        "description": "oilsmelter",
+        "address": "0x1ba288",
+        "size": 4,
+        "value": 300
+    },
+    {
+        "description": "siege_tent",
+        "address": "0x1ba28c",
+        "size": 4,
+        "value": 0
+    },
+    {
+        "description": "wheat_farm",
+        "address": "0x1ba290",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "hop_farm",
+        "address": "0x1ba294",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "apple_farm",
+        "address": "0x1ba298",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "dairy_farm",
+        "address": "0x1ba29c",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "mill",
+        "address": "0x1ba2a0",
+        "size": 4,
+        "value": 300
+    },
+    {
+        "description": "stables",
+        "address": "0x1ba2a4",
+        "size": 4,
+        "value": 300
+    },
+    {
+        "description": "chapel",
+        "address": "0x1ba2a8",
+        "size": 4,
+        "value": 400
+    },
+    {
+        "description": "church",
+        "address": "0x1ba2ac",
+        "size": 4,
+        "value": 800
+    },
+    {
+        "description": "cathedral",
+        "address": "0x1ba2b0",
+        "size": 4,
+        "value": 1200
+    },
+    {
+        "description": "unused1",
+        "address": "0x1ba2b4",
+        "size": 4,
+        "value": 0
+    },
+    {
+        "description": "keep_one",
+        "address": "0x1ba2b8",
+        "size": 4,
+        "value": 0
+    },
+    {
+        "description": "keep_two",
+        "address": "0x1ba2bc",
+        "size": 4,
+        "value": 0
+    },
+    {
+        "description": "keep_three",
+        "address": "0x1ba2c0",
+        "size": 4,
+        "value": 0
+    },
+    {
+        "description": "keep_four",
+        "address": "0x1ba2c4",
+        "size": 4,
+        "value": 0
+    },
+    {
+        "description": "keep_five",
+        "address": "0x1ba2c8",
+        "size": 4,
+        "value": 0
+    },
+    {
+        "description": "large_gatehouse",
+        "address": "0x1ba2cc",
+        "size": 4,
+        "value": 2000
+    },
+    {
+        "description": "small_gatehouse",
+        "address": "0x1ba2d0",
+        "size": 4,
+        "value": 1000
+    },
+    {
+        "description": "main_wood",
+        "address": "0x1ba2d4",
+        "size": 4,
+        "value": 200
+    },
+    {
+        "description": "postern_gate",
+        "address": "0x1ba2d8",
+        "size": 4,
+        "value": 0
+    },
+    {
+        "description": "drawbridge",
+        "address": "0x1ba2dc",
+        "size": 4,
+        "value": 0
+    },
+    {
+        "description": "tunnel",
+        "address": "0x1ba2e0",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "camp_fire",
+        "address": "0x1ba2e4",
+        "size": 4,
+        "value": 500
+    },
+    {
+        "description": "signpost",
+        "address": "0x1ba2e8",
+        "size": 4,
+        "value": 0
+    },
+    {
+        "description": "parade_ground1",
+        "address": "0x1ba2ec",
+        "size": 4,
+        "value": 500
+    },
+    {
+        "description": "s_fballista",
+        "address": "0x1ba2f0",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "campground",
+        "address": "0x1ba2f4",
+        "size": 4,
+        "value": 500
+    },
+    {
+        "description": "parade_ground2",
+        "address": "0x1ba2f8",
+        "size": 4,
+        "value": 500
+    },
+    {
+        "description": "parade_ground3",
+        "address": "0x1ba2fc",
+        "size": 4,
+        "value": 500
+    },
+    {
+        "description": "parade_ground4",
+        "address": "0x1ba300",
+        "size": 4,
+        "value": 500
+    },
+    {
+        "description": "parade_ground5",
+        "address": "0x1ba304",
+        "size": 4,
+        "value": 500
+    },
+    {
+        "description": "gatehouse",
+        "address": "0x1ba308",
+        "size": 4,
+        "value": 0
+    },
+    {
+        "description": "tower",
+        "address": "0x1ba30c",
+        "size": 4,
+        "value": 0
+    },
+    {
+        "description": "gallows",
+        "address": "0x1ba310",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "stocks",
+        "address": "0x1ba314",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "witch_hoist",
+        "address": "0x1ba318",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "maypole",
+        "address": "0x1ba31c",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "garden",
+        "address": "0x1ba320",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "killingpit",
+        "address": "0x1ba324",
+        "size": 4,
+        "value": 0
+    },
+    {
+        "description": "pitchditch",
+        "address": "0x1ba328",
+        "size": 4,
+        "value": 0
+    },
+    {
+        "description": "unused2",
+        "address": "0x1ba32c",
+        "size": 4,
+        "value": 1000
+    },
+    {
+        "description": "waterpot",
+        "address": "0x1ba330",
+        "size": 4,
+        "value": 200
+    },
+    {
+        "description": "keepdoor_left",
+        "address": "0x1ba334",
+        "size": 4,
+        "value": 0
+    },
+    {
+        "description": "keepdoor_right",
+        "address": "0x1ba338",
+        "size": 4,
+        "value": 0
+    },
+    {
+        "description": "keepdoor",
+        "address": "0x1ba33c",
+        "size": 4,
+        "value": 0
+    },
+    {
+        "description": "tower_one",
+        "address": "0x1ba340",
+        "size": 4,
+        "value": 250
+    },
+    {
+        "description": "tower_two",
+        "address": "0x1ba344",
+        "size": 4,
+        "value": 1000
+    },
+    {
+        "description": "tower_three",
+        "address": "0x1ba348",
+        "size": 4,
+        "value": 1200
+    },
+    {
+        "description": "tower_four",
+        "address": "0x1ba34c",
+        "size": 4,
+        "value": 1600
+    },
+    {
+        "description": "tower_five",
+        "address": "0x1ba350",
+        "size": 4,
+        "value": 2000
+    },
+    {
+        "description": "unused3",
+        "address": "0x1ba354",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "s_catapult",
+        "address": "0x1ba358",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "s_trebuchet",
+        "address": "0x1ba35c",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "s_batteringram",
+        "address": "0x1ba360",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "s_siegetower",
+        "address": "0x1ba364",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "s_shield",
+        "address": "0x1ba368",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "unused4",
+        "address": "0x1ba36c",
+        "size": 4,
+        "value": 0
+    },
+    {
+        "description": "s_mangonel",
+        "address": "0x1ba370",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "s_balista",
+        "address": "0x1ba374",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "unused5",
+        "address": "0x1ba378",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "unused6",
+        "address": "0x1ba37c",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "unused7",
+        "address": "0x1ba380",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "cesspit",
+        "address": "0x1ba384",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "burningstake",
+        "address": "0x1ba388",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "gibbet",
+        "address": "0x1ba38c",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "dungeon",
+        "address": "0x1ba390",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "stretchingrack",
+        "address": "0x1ba394",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "rack_flogging",
+        "address": "0x1ba398",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "choppingblock",
+        "address": "0x1ba39c",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "dunkingstool",
+        "address": "0x1ba3a0",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "dogcage",
+        "address": "0x1ba3a4",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "statue",
+        "address": "0x1ba3a8",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "shrine",
+        "address": "0x1ba3ac",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "bee_hive",
+        "address": "0x1ba3b0",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "dancingbear",
+        "address": "0x1ba3b4",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "pond",
+        "address": "0x1ba3b8",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "bear cave",
+        "address": "0x1ba3bc",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "outpost1",
+        "address": "0x1ba3c0",
+        "size": 4,
+        "value": 1500
+    },
+    {
+        "description": "outpost2",
+        "address": "0x1ba3c4",
+        "size": 4,
+        "value": 1500
+    }
+]

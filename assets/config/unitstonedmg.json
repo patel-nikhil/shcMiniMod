@@ -1,0 +1,464 @@
+[
+    {
+        "description": "stone_dmgpeasant",
+        "address": "0x74ed74",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgburningman",
+        "address": "0x74ed78",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgwoodcutter",
+        "address": "0x74ed7c",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgfletcher",
+        "address": "0x74ed80",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgtunneler",
+        "address": "0x74ed84",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmghunter",
+        "address": "0x74ed88",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgquarry_mason",
+        "address": "0x74ed8c",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgquarry_grunt",
+        "address": "0x74ed90",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgquarry_ox",
+        "address": "0x74ed94",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgpitchman",
+        "address": "0x74ed98",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgfarmer_wheat",
+        "address": "0x74ed9c",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgfarmer_hops",
+        "address": "0x74eda0",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgfarmer_apples",
+        "address": "0x74eda4",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgfarmer_cattle",
+        "address": "0x74eda8",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgmiller",
+        "address": "0x74edac",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgbaker",
+        "address": "0x74edb0",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgbrewer",
+        "address": "0x74edb4",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgpoleturner",
+        "address": "0x74edb8",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgblacksmith",
+        "address": "0x74edbc",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgarmourer",
+        "address": "0x74edc0",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgtanner",
+        "address": "0x74edc4",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmge_archer",
+        "address": "0x74edc8",
+        "size": 4,
+        "value": 1000
+    },
+    {
+        "description": "stone_dmge_xbow",
+        "address": "0x74edcc",
+        "size": 4,
+        "value": 750
+    },
+    {
+        "description": "stone_dmge_spear",
+        "address": "0x74edd0",
+        "size": 4,
+        "value": 1800
+    },
+    {
+        "description": "stone_dmge_pike",
+        "address": "0x74edd4",
+        "size": 4,
+        "value": 500
+    },
+    {
+        "description": "stone_dmge_mace",
+        "address": "0x74edd8",
+        "size": 4,
+        "value": 500
+    },
+    {
+        "description": "stone_dmge_sword",
+        "address": "0x74eddc",
+        "size": 4,
+        "value": 150
+    },
+    {
+        "description": "stone_dmge_knight",
+        "address": "0x74ede0",
+        "size": 4,
+        "value": 150
+    },
+    {
+        "description": "stone_dmge_ladder",
+        "address": "0x74ede4",
+        "size": 4,
+        "value": 2500
+    },
+    {
+        "description": "stone_dmge_engineer",
+        "address": "0x74ede8",
+        "size": 4,
+        "value": 2000
+    },
+    {
+        "description": "stone_dmgminer1",
+        "address": "0x74edec",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgminer2",
+        "address": "0x74edf0",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgpriest",
+        "address": "0x74edf4",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmghealer",
+        "address": "0x74edf8",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgdrunkard",
+        "address": "0x74edfc",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmginnkeeper",
+        "address": "0x74ee00",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmge_monk",
+        "address": "0x74ee04",
+        "size": 4,
+        "value": 500
+    },
+    {
+        "description": "stone_dmg???1",
+        "address": "0x74ee08",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgs_catapult",
+        "address": "0x74ee0c",
+        "size": 4,
+        "value": 200
+    },
+    {
+        "description": "stone_dmgs_trebuchet",
+        "address": "0x74ee10",
+        "size": 4,
+        "value": 150
+    },
+    {
+        "description": "stone_dmgs_mangonel",
+        "address": "0x74ee14",
+        "size": 4,
+        "value": 1000
+    },
+    {
+        "description": "stone_dmgtrader",
+        "address": "0x74ee18",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgtrader_horse",
+        "address": "0x74ee1c",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgdeer",
+        "address": "0x74ee20",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmglion",
+        "address": "0x74ee24",
+        "size": 4,
+        "value": 3000
+    },
+    {
+        "description": "stone_dmgrabbit",
+        "address": "0x74ee28",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgcamel",
+        "address": "0x74ee2c",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgcrow",
+        "address": "0x74ee30",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgseagull",
+        "address": "0x74ee34",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgsiegetent",
+        "address": "0x74ee38",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgcow",
+        "address": "0x74ee3c",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgdog",
+        "address": "0x74ee40",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgfireman",
+        "address": "0x74ee44",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgghost",
+        "address": "0x74ee48",
+        "size": 4,
+        "value": 50
+    },
+    {
+        "description": "stone_dmglord",
+        "address": "0x74ee4c",
+        "size": 4,
+        "value": 100
+    },
+    {
+        "description": "stone_dmglady",
+        "address": "0x74ee50",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgchester",
+        "address": "0x74ee54",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgs_tower",
+        "address": "0x74ee58",
+        "size": 4,
+        "value": 2000
+    },
+    {
+        "description": "stone_dmgs_batteringram",
+        "address": "0x74ee5c",
+        "size": 4,
+        "value": 2000
+    },
+    {
+        "description": "stone_dmgs_shield",
+        "address": "0x74ee60",
+        "size": 4,
+        "value": 10
+    },
+    {
+        "description": "stone_dmgs_ballista",
+        "address": "0x74ee64",
+        "size": 4,
+        "value": 1000
+    },
+    {
+        "description": "stone_dmgchicken",
+        "address": "0x74ee68",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgmother",
+        "address": "0x74ee6c",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgchild",
+        "address": "0x74ee70",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgjuggler",
+        "address": "0x74ee74",
+        "size": 4,
+        "value": 5000
+    },
+    {
+        "description": "stone_dmgfireeater",
+        "address": "0x74ee78",
+        "size": 4,
+        "value": 50000
+    },
+    {
+        "description": "stone_dmgdog",
+        "address": "0x74ee7c",
+        "size": 4,
+        "value": 2000
+    },
+    {
+        "description": "stone_dmg???2",
+        "address": "0x74ee80",
+        "size": 4,
+        "value": 0
+    },
+    {
+        "description": "stone_dmg???3",
+        "address": "0x74ee84",
+        "size": 4,
+        "value": 0
+    },
+    {
+        "description": "stone_dmga_archer",
+        "address": "0x74ee88",
+        "size": 4,
+        "value": 500
+    },
+    {
+        "description": "stone_dmga_slave",
+        "address": "0x74ee8c",
+        "size": 4,
+        "value": 4000
+    },
+    {
+        "description": "stone_dmga_slinger",
+        "address": "0x74ee90",
+        "size": 4,
+        "value": 3000
+    },
+    {
+        "description": "stone_dmga_assassin",
+        "address": "0x74ee94",
+        "size": 4,
+        "value": 500
+    },
+    {
+        "description": "stone_dmga_harcher",
+        "address": "0x74ee98",
+        "size": 4,
+        "value": 500
+    },
+    {
+        "description": "stone_dmga_sword",
+        "address": "0x74ee9c",
+        "size": 4,
+        "value": 200
+    },
+    {
+        "description": "stone_dmga_firethrower",
+        "address": "0x74eea0",
+        "size": 4,
+        "value": 400
+    },
+    {
+        "description": "stone_dmgs_fballista",
+        "address": "0x74eea4",
+        "size": 4,
+        "value": 100
+    }
+]
