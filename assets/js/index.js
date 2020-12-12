@@ -92,7 +92,12 @@ window.onload = function(e){
                 }
             }
         }
-        console.log(downloadConfig);
+        
+        if (!($.isEmptyObject(downloadConfig))){
+            download(JSON.stringify(downloadConfig, undefined, 4), "config.json", "application/json");
+        } else{
+            alert("No values were changed");
+        }
     });
 }
 
@@ -126,4 +131,21 @@ function arraysEqual(a, b) {
       if (a[i]() !== b[i]()) return false;
     }
     return true;
+  }
+
+  function download(data, filename, type) {
+    var file = new Blob([data], {type: type});
+    if (window.navigator.msSaveOrOpenBlob) // IE10+
+        window.navigator.msSaveOrOpenBlob(file, filename);
+    else { // Others
+        var a = document.createElement("a"), url = URL.createObjectURL(file);
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(function() {
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);  
+        }, 0); 
+    }
   }

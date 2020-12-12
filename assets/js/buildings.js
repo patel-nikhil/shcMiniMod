@@ -1296,7 +1296,7 @@ function loadBuildingTable(){
         buildingValues[buildingName]["value"] = () => {
             let value = {};
             if (!(arrayFunctionEqual(buildingValues[buildingName]["originalCost"], buildingValues[buildingName]["cost"]))){
-                value["cost"] = buildingValues[buildingName]["cost"]();
+                value["cost"] = buildingValues[buildingName]["cost"].map(func => func());
             }
             if (buildingValues[buildingName]["originalHealth"]() != buildingValues[buildingName]["health"]()){
                 value["health"] = buildingValues[buildingName]["health"]();
