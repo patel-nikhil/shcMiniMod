@@ -23740,7 +23740,7 @@ function loadUnitMeleeTable(){
       cell.style.border = tableHeaderBorder;
       // console.log(unitmelee[i]["description"].split(",")[1])
       cell.innerText = unitmelee[i]["description"].split(",")[1];
-      cell.tag = unitmelee[i]["description"].split(",")[1];
+      cell.cellIndex = i;
       header_row.appendChild(cell);
     }
     header.appendChild(header_row);
@@ -23763,7 +23763,8 @@ function loadUnitMeleeTable(){
         cell = document.createElement("td");
         cell.scope = "row";
         cell.style.border = cellBorderStyle;
-        cell.tag = unitmelee[i*tableSize + j]["description"].split(",")[1];
+        // cell.dataHook = unitmelee[i*tableSize + j]["description"].split(",")[1];
+        cell.cellIndex = j;
 
         let inputDmg = document.createElement("input");
         inputDmg.placeholder = unitmelee[i*tableSize + j]["value"];
@@ -23876,18 +23877,42 @@ function loadDefenderFilter(){
 
 $("#unitdefenderfilter").on("keyup", function() {
   var value = $(this).val().toLowerCase();
-  $("#unitmeleetable td").filter(function() {
-    console.log($(this));
-      $(this).toggle($(this).tag.toLowerCase().indexOf(value) > -1)
-  });
-  $("#unitmeleetable th").filter(function() {
-    $(this).toggle($(this).tag.toLowerCase().indexOf(value) > -1)
-});
+  // $("#unitmeleetable td").filter(function() {
+  //   console.log($(this));
+  //     $(this).toggle($(this).dataHook && $(this).dataHook.toLowerCase().indexOf(value) > -1)
+  // });
+  let headers = $("#unitmeleetable th");
+  var filteredColumns = []
+  for (const item of headers) {
+    if (item.innerText != "Unit" && item.innerText.toLowerCase().indexOf(value) == -1){
+      item.style.display = "None";
+      filteredColumns.push(item.cellIndex);
+    }
+  }
+
+  let cells = $("#unitmeleetable td");
+  for (const item of cells){
+    if (filteredColumns.indexOf(item.cellIndex) > -1){
+      item.style.display = "None";
+    }
+  }
+
+  // $("#unitmeleetable th").filter(function() {
+  //   $(this).toggle($(this).text() == "Unit" || $(this).text().toLowerCase().indexOf(value) > -1);
+  //   let index = $(this).cellIndex;
+  //   $("#unitmeleetable td").filter(function() {
+  //     $(this).toggle($(this).cellIndex == index);
+  //   });
+  // });
 });
 
 $("#unitdefenderfilterclear").on("click", function() {
   $("#unitdefenderfilter").val("");
-  $("#unitmeleetable").filter(function() {
-      $(this).show();
+  $("#unitmeleetable th").filter(function() {
+    $(this).show();
+  });
+
+  $("#unitmeleetable td").filter(function() {
+    $(this).show();
   });
 });
