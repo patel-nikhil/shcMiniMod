@@ -1726,11 +1726,8 @@ goods = ["Wood", "Stone", "Iron", "Pitch", "Gold"];
 
 window.onload = function(e){
     $("#buildingtable").html(loadBuildingTable(buildings, goods));
-    // $("#buildingcosttable").html(loadBuildingCostTable(buildingcosts, goods));
-    // $("#buildinghptable").html(loadHpTable(buildinghps));
     $("#unitbasetable").html(loadUnitBaseTable(unitBaseStats));
     $("#unitmeleetable").html(loadUnitMeleeTable());
-    // $("#unitcosttable").html(loadUnitCostTable(unitcosts));
 
     $("#global-reset").on("click", function(e){
         document.querySelectorAll(".btn").forEach(btn => {
@@ -1739,4 +1736,46 @@ window.onload = function(e){
             }
         })
     });
+
+    $("#btnCrusader").on("click", function(){
+        $(this).toggleClass("btn-success");
+        $("#btnExtreme").toggleClass("btn-success");
+    })
+
+    $("#btnExtreme").on("click", function(){
+        $(this).toggleClass("btn-success");
+        $("#btnCrusader").toggleClass("btn-success");
+    })
 }
+
+function arraysEqual(a, b) {
+    if (a === b) return true;
+    if (a == null || b == null) return false;
+    if (a.length !== b.length) return false;
+  
+    // If you don't care about the order of the elements inside
+    // the array, you should sort both arrays here.
+    // Please note that calling sort on an array will modify that array.
+    // you might want to clone your array first.
+  
+    for (var i = 0; i < a.length; ++i) {
+      if (a[i] !== b[i]) return false;
+    }
+    return true;
+  }
+
+  function arrayFunctionEqual(a, b) {
+    if (a === b) return true;
+    if (a == null || b == null) return false;
+    if (a.length !== b.length) return false;
+  
+    // If you don't care about the order of the elements inside
+    // the array, you should sort both arrays here.
+    // Please note that calling sort on an array will modify that array.
+    // you might want to clone your array first.
+  
+    for (var i = 0; i < a.length; ++i) {
+      if (a[i]() !== b[i]()) return false;
+    }
+    return true;
+  }

@@ -23717,6 +23717,8 @@ unitmelee = [
     }
 ];
 
+unitMeleeValues = {}
+
 function loadUnitMeleeTable(){
     var cellBorderStyle = "solid thin #000000";
     var tableHeaderBorder = "solid #000000";
@@ -23738,7 +23740,7 @@ function loadUnitMeleeTable(){
       var cell = document.createElement("th");
       cell.scope = "col";
       cell.style.border = tableHeaderBorder;
-      // console.log(unitmelee[i]["description"].split(",")[1])
+
       cell.innerText = unitmelee[i]["description"].split(",")[1];
       cell.cellIndex = i;
       header_row.appendChild(cell);
@@ -23746,17 +23748,20 @@ function loadUnitMeleeTable(){
     header.appendChild(header_row);
     table.appendChild(header);
 
-    console.log(tableSize);
 
     var body = document.createElement("tbody");
     for (let i = 0; i < tableSize; i++){
+      let unitMeleeAttacker = unitmelee[i*tableSize]["description"].split(",")[0];
 
       let row = document.createElement("tr");
       let cell = document.createElement("td");
       cell.scope = "row";    
       cell.style.border = cellBorderStyle;
-      cell.innerText = unitmelee[i*tableSize]["description"].split(",")[0];
+      cell.innerText = unitMeleeAttacker;
       row.append(cell);
+
+      /* Define unit melee value retriever */
+      unitMeleeValues[unitMeleeAttacker] = {};
 
 
       for (let j = 0; j < tableSize; j++){
@@ -23787,6 +23792,15 @@ function loadUnitMeleeTable(){
         });
         cell.append(button);
         row.append(cell);
+
+        /* Define unit melee value retriever */
+        let unitMeleeDefender = unitmelee[i*tableSize + j]["description"].split(",")[1];
+        unitMeleeValues[unitMeleeAttacker][unitMeleeDefender] = {}
+        unitMeleeValues[unitMeleeAttacker][unitMeleeDefender]["originalDamage"] = () => inputDmg.placeholder;
+        unitMeleeValues[unitMeleeAttacker][unitMeleeDefender]["damage"] = () => inputDmg.value;
+        unitMeleeValues[unitMeleeAttacker][unitMeleeDefender]["isChanged"] = () => {
+          return !(unitMeleeValues[unitMeleeAttacker][unitMeleeDefender]["originalDamage"]() == unitMeleeValues[unitMeleeAttacker][unitMeleeDefender]["damage"]());
+        }
       }
       body.append(row);
     }
@@ -23877,10 +23891,6 @@ function loadDefenderFilter(){
 
 $("#unitdefenderfilter").on("keyup", function() {
   var value = $(this).val().toLowerCase();
-  // $("#unitmeleetable td").filter(function() {
-  //   console.log($(this));
-  //     $(this).toggle($(this).dataHook && $(this).dataHook.toLowerCase().indexOf(value) > -1)
-  // });
   let headers = $("#unitmeleetable th");
   var filteredColumns = []
   for (const item of headers) {
@@ -23896,14 +23906,6 @@ $("#unitdefenderfilter").on("keyup", function() {
       item.style.display = "None";
     }
   }
-
-  // $("#unitmeleetable th").filter(function() {
-  //   $(this).toggle($(this).text() == "Unit" || $(this).text().toLowerCase().indexOf(value) > -1);
-  //   let index = $(this).cellIndex;
-  //   $("#unitmeleetable td").filter(function() {
-  //     $(this).toggle($(this).cellIndex == index);
-  //   });
-  // });
 });
 
 $("#unitdefenderfilterclear").on("click", function() {

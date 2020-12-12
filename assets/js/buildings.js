@@ -1,3 +1,5 @@
+buildingValues = {}
+
 function loadBuildingTable(buildingcosts, goods){
     var cellBorderStyle = "solid thin #000000";
     var tableHeaderBorder = "solid #000000";
@@ -33,11 +35,13 @@ function loadBuildingTable(buildingcosts, goods){
 
     var body = document.createElement("tbody");
     for (let i = 0; i < buildingcosts.length; i++){
+        let buildingName = buildingcosts[i]["description"];
+
         let row = document.createElement("tr");
         let cell = document.createElement("td");
         cell.scope = "row";    
         cell.style.border = cellBorderStyle;
-        cell.innerText = buildingcosts[i]["description"];
+        cell.innerText = buildingName;
         row.append(cell);
 
         /* Add building health cell */
@@ -66,6 +70,12 @@ function loadBuildingTable(buildingcosts, goods){
         cell.append(button);
         row.append(cell);
 
+        /* Define building value retriever */
+        buildingValues[buildingName] = {};
+        buildingValues[buildingName]["originalHealth"] = () => input.placeholder;
+        buildingValues[buildingName]["health"] = () => input.value;
+        buildingValues[buildingName]["originalCost"] = [];
+        buildingValues[buildingName]["cost"] = [];
 
         /* Add building cost cells */
         for (let j = 0; j < buildingcosts[i]["cost"].length; j++){
@@ -93,8 +103,15 @@ function loadBuildingTable(buildingcosts, goods){
             });
             cell.append(button);
             row.append(cell);
+
+            buildingValues[buildingName]["originalCost"].push(() => input.placeholder);
+            buildingValues[buildingName]["cost"].push(() => input.value);
         }
         body.append(row);
+        buildingValues[buildingName]["isChanged"] = () => {
+            return !(arrayFunctionEqual(buildingValues[buildingName]["originalCost"], buildingValues[buildingName]["cost"]) &&
+            buildingValues[buildingName]["originalHealth"]() == buildingValues[buildingName]["health"]());
+        };
     }
     table.append(body);
     return table;

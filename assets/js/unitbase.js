@@ -1,3 +1,5 @@
+unitBaseValues = {}
+
 function loadUnitBaseTable(unitBaseStats){
     var cellBorderStyle = "solid thin #000000";
     var tableHeaderBorder = "solid #000000";
@@ -44,11 +46,13 @@ function loadUnitBaseTable(unitBaseStats){
 
     var body = document.createElement("tbody");
     for (let i = 0; i < unitBaseStats.length; i++){
+        let unitName = unitBaseStats[i]["description"];
+
         let row = document.createElement("tr");
         let cell = document.createElement("td");
         cell.scope = "row";    
         cell.style.border = cellBorderStyle;
-        cell.innerText = unitBaseStats[i]["description"];
+        cell.innerText = unitName;
         row.append(cell);
 
         /* unit hp input */
@@ -158,6 +162,25 @@ function loadUnitBaseTable(unitBaseStats){
         cell.append(button);
         row.append(cell);
 
+
+        /* Define unit value retriever */
+        unitBaseValues[unitName] = {};
+        unitBaseValues[unitName]["originalHealth"] = () => inputHealth.placeholder;
+        unitBaseValues[unitName]["health"] = () => inputHealth.value;
+        unitBaseValues[unitName]["originalArrowDamage"] = () => inputArrow.placeholder;
+        unitBaseValues[unitName]["arrowDamage"] = () => inputArrow.value;
+        unitBaseValues[unitName]["originalXbowDamage"] = () => inputXbow.placeholder;
+        unitBaseValues[unitName]["xbowDamage"] = () => inputXbow.value;
+        unitBaseValues[unitName]["originalStoneDamage"] = () => inputStone.placeholder;
+        unitBaseValues[unitName]["stoneDamage"] = () => inputStone.value;
+        unitBaseValues[unitName]["isChanged"] = () => {
+            return !(
+                unitBaseValues[unitName]["originalHealth"]() == unitBaseValues[unitName]["health"]() &&
+                unitBaseValues[unitName]["originalArrowDamage"]() == unitBaseValues[unitName]["arrowDamage"]() &&
+                unitBaseValues[unitName]["originalXbowDamage"]() == unitBaseValues[unitName]["xbowDamage"]() &&
+                unitBaseValues[unitName]["originalStoneDamage"]() == unitBaseValues[unitName]["stoneDamage"]()
+            );
+        }
 
         body.append(row);
     }
