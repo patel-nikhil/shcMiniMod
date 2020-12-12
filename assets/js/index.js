@@ -1740,12 +1740,65 @@ window.onload = function(e){
     $("#btnCrusader").on("click", function(){
         $(this).toggleClass("btn-success");
         $("#btnExtreme").toggleClass("btn-success");
-    })
+    });
 
     $("#btnExtreme").on("click", function(){
         $(this).toggleClass("btn-success");
         $("#btnCrusader").toggleClass("btn-success");
-    })
+    });
+
+    $("#download").on("click", function(){
+        let buildingConfig = {};
+        for (let i = 0; i < Object.keys(buildingValues).length; i++){
+            let name = Object.keys(buildingValues)[i];
+            let building = buildingValues[name];
+            let value = building["value"]();
+            if (!($.isEmptyObject(value))){
+                buildingConfig[name] = value;
+            }
+        }
+
+        let unitBaseConfig = {};
+        for (let i = 0; i < Object.keys(unitBaseValues).length; i++){
+            let name = Object.keys(unitBaseValues)[i];
+            let unit = unitBaseValues[name];
+            let value = unit["value"]();
+            if (!($.isEmptyObject(value))){
+                unitBaseConfig[name] = value;
+            }
+        }
+
+        let unitMeleeConfig = {};
+        for (let i = 0; i < Object.keys(unitMeleeValues).length; i++){
+            let attackerName = Object.keys(unitBaseValues)[i];
+            let currentConfig = {};
+
+            for (let j = 0; j < Object.keys(unitMeleeValues[attackerName]).length; j++){
+                let defenderName = Object.keys(unitMeleeValues[attackerName])[j];
+                let value = unitMeleeValues[attackerName][defenderName]["value"]();
+                if (!($.isEmptyObject(value))){
+                    currentConfig[defenderName] = value;
+                }
+            }
+            if (!($.isEmptyObject(currentConfig))){
+                if (unitMeleeConfig == undefined){
+                    unitMeleeConfig = {};
+                }
+                unitMeleeConfig[attackerName] = currentConfig;
+            }
+        }
+
+        if (!($.isEmptyObject(buildingConfig))){
+            console.log(buildingConfig);
+        }
+        if (!($.isEmptyObject(unitBaseConfig))){
+            console.log(unitBaseConfig);
+        }
+
+        if (!($.isEmptyObject(unitMeleeConfig))){
+            console.log(unitMeleeConfig);
+        }
+    });
 }
 
 function arraysEqual(a, b) {

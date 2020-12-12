@@ -108,9 +108,16 @@ function loadBuildingTable(buildingcosts, goods){
             buildingValues[buildingName]["cost"].push(() => input.value);
         }
         body.append(row);
-        buildingValues[buildingName]["isChanged"] = () => {
-            return !(arrayFunctionEqual(buildingValues[buildingName]["originalCost"], buildingValues[buildingName]["cost"]) &&
-            buildingValues[buildingName]["originalHealth"]() == buildingValues[buildingName]["health"]());
+
+        buildingValues[buildingName]["value"] = () => {
+            let value = {};
+            if (!(arrayFunctionEqual(buildingValues[buildingName]["originalCost"], buildingValues[buildingName]["cost"]))){
+                value["cost"] = buildingValues[buildingName]["cost"]();
+            }
+            if (buildingValues[buildingName]["originalHealth"]() != buildingValues[buildingName]["health"]()){
+                value["health"] = buildingValues[buildingName]["health"]();
+            }
+            return value;
         };
     }
     table.append(body);

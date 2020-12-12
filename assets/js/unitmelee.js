@@ -23798,8 +23798,13 @@ function loadUnitMeleeTable(){
         unitMeleeValues[unitMeleeAttacker][unitMeleeDefender] = {}
         unitMeleeValues[unitMeleeAttacker][unitMeleeDefender]["originalDamage"] = () => inputDmg.placeholder;
         unitMeleeValues[unitMeleeAttacker][unitMeleeDefender]["damage"] = () => inputDmg.value;
-        unitMeleeValues[unitMeleeAttacker][unitMeleeDefender]["isChanged"] = () => {
-          return !(unitMeleeValues[unitMeleeAttacker][unitMeleeDefender]["originalDamage"]() == unitMeleeValues[unitMeleeAttacker][unitMeleeDefender]["damage"]());
+        
+        unitMeleeValues[unitMeleeAttacker][unitMeleeDefender]["value"] = () => {
+          let value = {};
+          if (unitMeleeValues[unitMeleeAttacker][unitMeleeDefender]["originalDamage"]() != unitMeleeValues[unitMeleeAttacker][unitMeleeDefender]["damage"]()){
+            value["damage"] = unitMeleeValues[unitMeleeAttacker][unitMeleeDefender]["damage"]();
+          }
+          return value;
         }
       }
       body.append(row);

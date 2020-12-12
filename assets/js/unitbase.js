@@ -173,15 +173,23 @@ function loadUnitBaseTable(unitBaseStats){
         unitBaseValues[unitName]["xbowDamage"] = () => inputXbow.value;
         unitBaseValues[unitName]["originalStoneDamage"] = () => inputStone.placeholder;
         unitBaseValues[unitName]["stoneDamage"] = () => inputStone.value;
-        unitBaseValues[unitName]["isChanged"] = () => {
-            return !(
-                unitBaseValues[unitName]["originalHealth"]() == unitBaseValues[unitName]["health"]() &&
-                unitBaseValues[unitName]["originalArrowDamage"]() == unitBaseValues[unitName]["arrowDamage"]() &&
-                unitBaseValues[unitName]["originalXbowDamage"]() == unitBaseValues[unitName]["xbowDamage"]() &&
-                unitBaseValues[unitName]["originalStoneDamage"]() == unitBaseValues[unitName]["stoneDamage"]()
-            );
-        }
-
+        
+        unitBaseValues[unitName]["value"] = () => {
+            let value = {};
+            if (unitBaseValues[unitName]["originalHealth"]() != unitBaseValues[unitName]["health"]()){
+                value["health"] = unitBaseValues[unitName]["health"]();
+            }
+            if (unitBaseValues[unitName]["originalArrowDamage"]() != unitBaseValues[unitName]["arrowDamage"]()){
+                value["arrowDamage"] = unitBaseValues[unitName]["arrowDamage"]();
+            }
+            if (unitBaseValues[unitName]["originalXbowDamage"]() != unitBaseValues[unitName]["xbowDamage"]()){
+                value["xbowDamage"] = unitBaseValues[unitName]["xbowDamage"]();
+            }
+            if (unitBaseValues[unitName]["originalStoneDamage"]() != unitBaseValues[unitName]["stoneDamage"]()){
+                value["stoneDamage"] = unitBaseValues[unitName]["stoneDamage"]();
+            }
+            return value;
+        };
         body.append(row);
     }
     table.append(body);
