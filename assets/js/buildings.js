@@ -1351,7 +1351,7 @@ function loadFilter(){
 $("#buildingfilter").on("keyup", function() {
     var value = $(this).val().toLowerCase();
     $("#buildingtable tbody tr").filter(function() {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        $(this).toggle($(this).text().replace(new RegExp("Reset", 'g'), "").toLowerCase().indexOf(value) > -1)
     });
 });
 

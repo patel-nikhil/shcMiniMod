@@ -23841,7 +23841,7 @@ function loadAttackerFilter(){
 $("#unitattackerfilter").on("keyup", function() {
     var value = $(this).val().toLowerCase();
     $("#unitmeleetable tbody tr").filter(function() {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        $(this).toggle($(this).text().replace(new RegExp("Reset", 'g'), "").toLowerCase().indexOf(value) > -1)
     });
 });
 
@@ -23910,7 +23910,7 @@ $("#unitdefenderfilter").on("keyup", function() {
   }
 
   for (const item of headers) {
-    if (item.innerText != "Unit" && item.innerText.toLowerCase().indexOf(value) == -1){
+    if (item.innerText != "Unit" && item.innerText.replace(new RegExp("Reset", 'g'), "").toLowerCase().indexOf(value) == -1){
       item.style.display = "None";
       filteredColumns.push(item.cellIndex);
     }

@@ -107,7 +107,7 @@ function loadFilter(){
 $("#buildingcostfilter").on("keyup", function() {
     var value = $(this).val().toLowerCase();
     $("#buildingcosttable tbody tr").filter(function() {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        $(this).toggle($(this).text().replace(new RegExp("Reset", 'g'), "").toLowerCase().indexOf(value) > -1)
     });
 });
 

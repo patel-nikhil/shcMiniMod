@@ -126,7 +126,7 @@ function loadFilter(){
 $("#buildinghpfilter").on("keyup", function() {
     var value = $(this).val().toLowerCase();
     $("#buildinghptable tbody tr").filter(function() {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        $(this).toggle($(this).text().replace(new RegExp("Reset", 'g'), "").toLowerCase().indexOf(value) > -1)
     });
 });
 

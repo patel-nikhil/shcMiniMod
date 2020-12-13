@@ -33,6 +33,16 @@ window.onload = function(e){
             }
         }
 
+        let resourceConfig = {};
+        for (let i = 0; i < Object.keys(resourceValues).length; i++){
+            let name = Object.keys(resourceValues)[i];
+            let unit = resourceValues[name];
+            let value = unit["value"]();
+            if (!($.isEmptyObject(value))){
+                resourceConfig[name] = value;
+            }
+        }
+
         let unitBaseConfig = {};
         for (let i = 0; i < Object.keys(unitBaseValues).length; i++){
             let name = Object.keys(unitBaseValues)[i];
@@ -67,6 +77,10 @@ window.onload = function(e){
         let downloadConfig = {}
         if (!($.isEmptyObject(buildingConfig))){
             downloadConfig["buildings"] = buildingConfig;
+        }
+
+        if (!($.isEmptyObject(resourceConfig))){
+            downloadConfig["resources"] = resourceConfig;
         }
 
         if (!($.isEmptyObject(unitBaseConfig))){

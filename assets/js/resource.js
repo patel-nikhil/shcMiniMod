@@ -1,120 +1,122 @@
 resources = [
     {
         "description": "Wood",
-        "Buy": 20,
-        "Sell": 5
+        "buy": 20,
+        "sell": 5
     },
     {
         "description": "Hop",
-        "Buy": 75,
-        "Sell": 40
+        "buy": 75,
+        "sell": 40
     },
     {
         "description": "Stone",
-        "Buy": 70,
-        "Sell": 35
+        "buy": 70,
+        "sell": 35
     },
     {
         "description": "Blank1",
-        "Buy": 0,
-        "Sell": 0
+        "buy": 0,
+        "sell": 0
     },
     {
         "description": "Iron",
-        "Buy": 225,
-        "Sell": 115
+        "buy": 225,
+        "sell": 115
     },
     {
         "description": "Pitch",
-        "Buy": 100,
-        "Sell": 50
+        "buy": 100,
+        "sell": 50
     },
     {
         "description": "Blank2",
-        "Buy": 0,
-        "Sell": 0
+        "buy": 0,
+        "sell": 0
     },
     {
         "description": "Wheat",
-        "Buy": 115,
-        "Sell": 40
+        "buy": 115,
+        "sell": 40
     },
     {
         "description": "Bread",
-        "Buy": 40,
-        "Sell": 20
+        "buy": 40,
+        "sell": 20
     },
     {
         "description": "Cheese",
-        "Buy": 40,
-        "Sell": 20
+        "buy": 40,
+        "sell": 20
     },
     {
         "description": "Meat",
-        "Buy": 40,
-        "Sell": 20
+        "buy": 40,
+        "sell": 20
     },
     {
         "description": "Fruit",
-        "Buy": 40,
-        "Sell": 20
+        "buy": 40,
+        "sell": 20
     },
     {
         "description": "Beer",
-        "Buy": 100,
-        "Sell": 50
+        "buy": 100,
+        "sell": 50
     },
     {
         "description": "Blank3",
-        "Buy": 0,
-        "Sell": 0
+        "buy": 0,
+        "sell": 0
     },
     {
         "description": "Flour",
-        "Buy": 160,
-        "Sell": 50
+        "buy": 160,
+        "sell": 50
     },
     {
         "description": "Bow",
-        "Buy": 155,
-        "Sell": 75
+        "buy": 155,
+        "sell": 75
     },
     {
         "description": "Xbow",
-        "Buy": 290,
-        "Sell": 150
+        "buy": 290,
+        "sell": 150
     },
     {
         "description": "Spear",
-        "Buy": 100,
-        "Sell": 50
+        "buy": 100,
+        "sell": 50
     },
     {
         "description": "Pike",
-        "Buy": 180,
-        "Sell": 90
+        "buy": 180,
+        "sell": 90
     },
     {
         "description": "Mace",
-        "Buy": 290,
-        "Sell": 150
+        "buy": 290,
+        "sell": 150
     },
     {
         "description": "Sword",
-        "Buy": 290,
-        "Sell": 150
+        "buy": 290,
+        "sell": 150
     },
     {
         "description": "Leather",
-        "Buy": 125,
-        "Sell": 60
+        "buy": 125,
+        "sell": 60
     },
     {
         "description": "Armor",
-        "Buy": 290,
-        "Sell": 150
+        "buy": 290,
+        "sell": 150
     }
 ];
+
+resourceValues = {}
 
 function loadResourceTable(){
     var cellBorderStyle = "solid thin #000000";
@@ -150,6 +152,8 @@ function loadResourceTable(){
     var body = document.createElement("tbody");
     for (let i = 0; i < resources.length; i++){
         let row = document.createElement("tr");
+        row.dataHook = resources[i]["description"];
+
         let cell = document.createElement("td");
         cell.scope = "row";    
         cell.style.border = cellBorderStyle;
@@ -163,8 +167,8 @@ function loadResourceTable(){
         cell.style.border = cellBorderStyle;
 
         let resourceBuy = document.createElement("input");
-        resourceBuy.placeholder = resources[i]["Buy"];
-        resourceBuy.value = resources[i]["Buy"];
+        resourceBuy.placeholder = resources[i]["buy"];
+        resourceBuy.value = resources[i]["buy"];
         resourceBuy.type = "number";
         resourceBuy.min = 0;
         resourceBuy.max = 4294967295;
@@ -190,8 +194,8 @@ function loadResourceTable(){
         cell.style.border = cellBorderStyle;
 
         let resourceSell = document.createElement("input");
-        resourceSell.placeholder = resources[i]["Sell"];
-        resourceSell.value = resources[i]["Sell"];
+        resourceSell.placeholder = resources[i]["sell"];
+        resourceSell.value = resources[i]["sell"];
         resourceSell.type = "number";
         resourceSell.min = 0;
         resourceSell.max = 4294967295;
@@ -205,10 +209,29 @@ function loadResourceTable(){
         button.classList.add("resource");
         button.style.marginLeft = "10px";
         button.addEventListener("click", function(e){
-            resourceBuy.value = resourceBuy.placeholder;
+            resourceSell.value = resourceSell.placeholder;
         });
         cell.append(button);
         row.append(cell);
+
+        /* Define building value retriever */
+        let resourceName = resources[i]["description"];
+        resourceValues[resourceName] = {};
+        resourceValues[resourceName]["originalBuy"] = () => resourceBuy.placeholder;
+        resourceValues[resourceName]["buy"] = () => resourceBuy.value;
+        resourceValues[resourceName]["originalSell"] = () => resourceSell.placeholder;
+        resourceValues[resourceName]["sell"] = () => resourceSell.value;
+
+        resourceValues[resourceName]["value"] = () => {
+            let value = {};
+            if (resourceValues[resourceName]["originalBuy"]() != resourceValues[resourceName]["buy"]()){
+                value["buy"] = resourceValues[resourceName]["buy"]();
+            }
+            if (resourceValues[resourceName]["originalSell"]() != resourceValues[resourceName]["sell"]()){
+                value["sell"] = resourceValues[resourceName]["sell"]();
+            }
+            return value;
+        };
 
         body.append(row);
     }
@@ -259,7 +282,7 @@ function loadFilter(){
 $("#resourcefilter").on("keyup", function() {
     var value = $(this).val().toLowerCase();
     $("#resourcetable tbody tr").filter(function() {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        $(this).toggle($(this).text().replace(new RegExp("Reset", 'g'), "").toLowerCase().indexOf(value) > -1)
     });
 });
 
