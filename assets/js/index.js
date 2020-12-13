@@ -1,5 +1,6 @@
 window.onload = function(e){
     $("#buildingtable").html(loadBuildingTable());
+    $("#resourcetable").html(loadResourceTable());
     $("#unitbasetable").html(loadUnitBaseTable());
     $("#unitmeleetable").html(loadUnitMeleeTable());
 
