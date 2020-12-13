@@ -78,17 +78,20 @@ window.onload = function(e){
         }
 
         if (!($.isEmptyObject(unitMeleeConfig))){
+            if (downloadConfig["units"] == undefined){
+                downloadConfig["units"] = {};
+            }
             for (let i = 0; i < Object.keys(unitMeleeConfig).length; i++){
                 let attacker = Object.keys(unitMeleeConfig)[i];
                 if (downloadConfig["units"][attacker] == undefined){
                     downloadConfig["units"][attacker] = {};
                 }
-                if (downloadConfig["units"][attacker]["damage"] == undefined){
-                    downloadConfig["units"][attacker]["damage"] = {};
+                if (downloadConfig["units"][attacker]["meleeDamageVs"] == undefined){
+                    downloadConfig["units"][attacker]["meleeDamageVs"] = {};
                 }
 
                 for (var defender in unitMeleeConfig[attacker]){
-                    downloadConfig["units"][attacker]["damage"][defender] = unitMeleeConfig[attacker][defender]["damage"];
+                    downloadConfig["units"][attacker]["meleeDamageVs"][defender] = unitMeleeConfig[attacker][defender]["meleeDamageVs"];
                 }
             }
         }

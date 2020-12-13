@@ -23802,7 +23802,7 @@ function loadUnitMeleeTable(){
         unitMeleeValues[unitMeleeAttacker][unitMeleeDefender]["value"] = () => {
           let value = {};
           if (unitMeleeValues[unitMeleeAttacker][unitMeleeDefender]["originalDamage"]() != unitMeleeValues[unitMeleeAttacker][unitMeleeDefender]["damage"]()){
-            value["damage"] = unitMeleeValues[unitMeleeAttacker][unitMeleeDefender]["damage"]();
+            value["meleeDamageVs"] = unitMeleeValues[unitMeleeAttacker][unitMeleeDefender]["damage"]();
           }
           return value;
         }
