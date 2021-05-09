@@ -114,6 +114,28 @@ def install():
                 subconfig = config[cfg]
 
                 for change in subconfig:
+
+                    if change["description"] == "tax_reset" or change["description"] == "assassin_rally_speed":
+                        if not("other" in uninstall):
+                            uninstall["other"] = {}
+
+                        
+
+                        if change["description"] == "tax_reset" and change["value"] == True:
+                            uninstall["other"]["tax_reset"] = copy.deepcopy(change)
+                            install_tax_change()
+                            continue
+                        if change["description"] == "assassin_rally_speed":
+                            uninstall["other"]["assassin_rally_speed"] = copy.deepcopy(change)
+                            speed = change["value"]
+                            speed = speed & 0xF
+                            assassin_rally_aob = [0x66, 0xBA, speed, 0x00, 0x90, 0x90, 0x90]
+                            shc.seek(0)
+                            shc.seek(0x174A60)
+                            for elem in assassin_rally_aob:
+                                shc.write((elem).to_bytes(1, byteorder='little'))
+                            continue
+
                     address = int(change["address"], 16)
                     size = change["size"]
 
@@ -146,11 +168,22 @@ def uninstall():
                 uninstall = json.load(f)
             except json.JSONDecodeError:
                 return
-        
+
         with open(os.path.join(os.path.dirname(os.getcwd()), "Stronghold_Crusader_Extreme.exe"), "r+b") as shc:
             for size in uninstall:
                 for key in uninstall[size]:
-                    write(shc, int(key), uninstall[size][key], int(size))
+                    try:
+                        write(shc, int(key), uninstall[size][key], int(size)) 
+                    except:
+                        if "tax_reset" in uninstall[size]:
+                            uninstall_tax_change()
+                        if "assassin_rally_speed" in uninstall[size]:
+                            assassin_rally_aob = [0x66, 0x8B, 0x96, 0x88, 0xD3, 0x45, 0x01]
+                            shc.seek(0)
+                            shc.seek(0x174A60)
+                            for elem in assassin_rally_aob:
+                                shc.write((elem).to_bytes(1, byteorder='little'))
+                        break
 
 
 
@@ -224,6 +257,147 @@ def write(shc, address, value, size):
     shc.seek(address)
     shc.write(int(value).to_bytes(size, byteorder='little'))
     # print(size, address, value)
+
+
+
+def install_tax_change():
+
+    original_section_count = None
+    with open(os.path.join(os.path.dirname(os.getcwd()), "Stronghold_Crusader_Extreme.exe"), "r+b") as shc:
+        shc.seek(0)
+        shc.seek(int("0x11E", 16))
+        original_section_count = int.from_bytes(shc.read(1), byteorder='little')
+    
+    if original_section_count != 5:
+        import ctypes
+        ctypes.windll.user32.MessageBoxW(0, "Error UCP not installed, tax_reset change failed", "Tax change install error", 0)
+        sys.exit()
+
+    SIZE = 0x8000
+
+    # Increase image size to accommodate for extra code
+    with open(os.path.join(os.path.dirname(os.getcwd()), "Stronghold_Crusader_Extreme.exe"), "r+b") as shc:
+        shc.seek(0)
+        shc.seek(int("0x168", 16))
+        shc.write((0x2F88000).to_bytes(4, byteorder='little'))
+
+    with open(os.path.join(os.path.dirname(os.getcwd()), "Stronghold_Crusader_Extreme.exe"), "r+b") as shc:
+        shc.seek(0)
+        shc.seek(int("0x2B9", 16))
+        shc.write((0xF0).to_bytes(1, byteorder='little'))
+
+    with open(os.path.join(os.path.dirname(os.getcwd()), "Stronghold_Crusader_Extreme.exe"), "r+b") as shc:
+        shc.seek(0)
+        shc.seek(int("0x2C1", 16))
+        shc.write((0xF0).to_bytes(1, byteorder='little'))
+
+
+    # Reset tax on < 1 popularity
+    tax_instructions = [
+        0x3D, 0x64, 0x00, 0x00, 0x00,
+        0x7F, 0x12,
+        0x83, 0xBC, 0x3E, 0x88, 0x56, 0x0C, 0x00, 0x03,
+        0x7E, 0x08,
+        0xC6, 0x84, 0x3E, 0x88, 0x56, 0x0C, 0x00, 0x03,
+        0x89, 0x84, 0x3E, 0xB4, 0x38, 0x0C, 0x00,
+        0xE9, 0x09, 0x4B, 0x4D, 0xFD #45BB2E
+    ]
+
+    with open(os.path.join(os.path.dirname(os.getcwd()), "Stronghold_Crusader_Extreme.exe"), "r+b") as shc:
+        shc.seek(0)
+        shc.seek(int("0x7B6000", 16))
+        for elem in tax_instructions:
+            shc.write(int(str(elem)).to_bytes(1, byteorder='little'))
+
+    position = 0x2F87000 - 0x45bb2c
+
+    with open(os.path.join(os.path.dirname(os.getcwd()), "Stronghold_Crusader_Extreme.exe"), "r+b") as shc:
+        shc.seek(0)
+        shc.seek(int("0x5BB27", 16))
+        shc.write(int("0xE9", 16).to_bytes(1, byteorder='little'))
+        shc.write((position).to_bytes(4, byteorder='little'))
+        shc.write((0x90).to_bytes(1, byteorder='little'))
+        shc.write((0x90).to_bytes(1, byteorder='little'))
+
+
+    with open(os.path.join(os.path.dirname(os.getcwd()), "Stronghold_Crusader_Extreme.exe"), "r+b") as shc:
+        shc.seek(0)
+        shc.seek(int("0x7B6025", 16))
+        for i in range(0xB):
+            shc.write((0x90).to_bytes(1, byteorder='little'))
+
+
+    # Zero-out tax gold on < 1 popularity
+    zero_tax_instructions = [
+        0x66, 0x83, 0xBB, 0xA8, 0x72, 0x0C, 0x00, 0x64,
+        0x7D, 0x0C,
+        0x83, 0x3E, 0x3,
+        0x7E, 0x07,
+        0xB8, 0x03, 0x00, 0x00, 0x00,
+        0x7F, 0x02,
+        0x8B, 0x06,
+        0x83, 0xF8, 0x03,
+
+        0xE9, 0x60, 0x51, 0x4D, 0xFD, #45C1B0
+    ]
+
+    with open(os.path.join(os.path.dirname(os.getcwd()), "Stronghold_Crusader_Extreme.exe"), "r+b") as shc:
+        shc.seek(0)
+        shc.seek(int("0x7B6030", 16))
+        for elem in zero_tax_instructions:
+            shc.write(int(str(elem)).to_bytes(1, byteorder='little'))
+
+    position = 0x2F87030 - 0x45C1B0
+
+    with open(os.path.join(os.path.dirname(os.getcwd()), "Stronghold_Crusader_Extreme.exe"), "r+b") as shc:
+        shc.seek(0)
+        shc.seek(int("0x5C1AB", 16))
+        shc.write(int("0xE9", 16).to_bytes(1, byteorder='little'))
+        shc.write((position).to_bytes(4, byteorder='little'))
+
+    with open(os.path.join(os.path.dirname(os.getcwd()), "Stronghold_Crusader_Extreme.exe"), "r+b") as shc:
+        shc.seek(0)
+        shc.seek(int("0x7B6050", 16))
+        for i in range(0xFB0):
+            shc.write((0x90).to_bytes(1, byteorder='little'))
+
+
+
+
+def uninstall_tax_change():
+    # Reset image size to original ucp section size
+    with open(os.path.join(os.path.dirname(os.getcwd()), "Stronghold_Crusader_Extreme.exe"), "r+b") as shc:
+        shc.seek(0)
+        shc.seek(int("0x168", 16))
+        shc.write((0x2F87000).to_bytes(4, byteorder='little'))
+
+    with open(os.path.join(os.path.dirname(os.getcwd()), "Stronghold_Crusader_Extreme.exe"), "r+b") as shc:
+        shc.seek(0)
+        shc.seek(int("0x2B9", 16))
+        shc.write((0xE0).to_bytes(1, byteorder='little'))
+
+    with open(os.path.join(os.path.dirname(os.getcwd()), "Stronghold_Crusader_Extreme.exe"), "r+b") as shc:
+        shc.seek(0)
+        shc.seek(int("0x2C1", 16))
+        shc.write((0xE0).to_bytes(1, byteorder='little'))
+    
+
+    # Undo tax reset change
+    original_tax_reset_instructions = [0x89, 0x84, 0x3E, 0xB4, 0x38, 0x0C, 0x00]
+
+    with open(os.path.join(os.path.dirname(os.getcwd()), "Stronghold_Crusader_Extreme.exe"), "r+b") as shc:
+        shc.seek(0)
+        shc.seek(int("0x5BB27", 16))
+        for elem in original_tax_reset_instructions:
+            shc.write(int(str(elem)).to_bytes(1, byteorder='little'))
+
+    original_tax_gold_instructions = [0x8B, 0x06, 0x83, 0xF8, 0x03]
+
+    with open(os.path.join(os.path.dirname(os.getcwd()), "Stronghold_Crusader_Extreme.exe"), "r+b") as shc:
+        shc.seek(0)
+        shc.seek(int("0x5C1AB", 16))
+        for elem in original_tax_gold_instructions:
+            shc.write(int(str(elem)).to_bytes(1, byteorder='little'))
 
 
 if __name__ == "__main__":
