@@ -279,17 +279,17 @@ def install_tax_change():
     with open(os.path.join(os.path.dirname(os.getcwd()), "Stronghold_Crusader_Extreme.exe"), "r+b") as shc:
         shc.seek(0)
         shc.seek(int("0x168", 16))
-        shc.write((0x2F88000).to_bytes(4, byteorder='little'))
+        shc.write((0x2B90000).to_bytes(4, byteorder='little'))
 
     with open(os.path.join(os.path.dirname(os.getcwd()), "Stronghold_Crusader_Extreme.exe"), "r+b") as shc:
         shc.seek(0)
         shc.seek(int("0x2B9", 16))
-        shc.write((0xF0).to_bytes(1, byteorder='little'))
+        shc.write((0x70).to_bytes(1, byteorder='little'))
 
     with open(os.path.join(os.path.dirname(os.getcwd()), "Stronghold_Crusader_Extreme.exe"), "r+b") as shc:
         shc.seek(0)
         shc.seek(int("0x2C1", 16))
-        shc.write((0xF0).to_bytes(1, byteorder='little'))
+        shc.write((0x70).to_bytes(1, byteorder='little'))
 
 
     # Reset tax on < 1 popularity
@@ -300,16 +300,16 @@ def install_tax_change():
         0x7E, 0x08,
         0xC6, 0x84, 0x3E, 0x88, 0x56, 0x0C, 0x00, 0x03,
         0x89, 0x84, 0x3E, 0xB4, 0x38, 0x0C, 0x00,
-        0xE9, 0x09, 0x4B, 0x4D, 0xFD #45BB2E
+        0xE9, 0x09, 0xCB, 0x4C, 0xFD #45BB2E
     ]
 
     with open(os.path.join(os.path.dirname(os.getcwd()), "Stronghold_Crusader_Extreme.exe"), "r+b") as shc:
         shc.seek(0)
-        shc.seek(int("0x7B6000", 16))
+        shc.seek(int("0x7BE000", 16))
         for elem in tax_instructions:
             shc.write(int(str(elem)).to_bytes(1, byteorder='little'))
 
-    position = 0x2F87000 - 0x45bb2c
+    position = 0x2F8F000 - 0x45bb2c
 
     with open(os.path.join(os.path.dirname(os.getcwd()), "Stronghold_Crusader_Extreme.exe"), "r+b") as shc:
         shc.seek(0)
@@ -322,7 +322,7 @@ def install_tax_change():
 
     with open(os.path.join(os.path.dirname(os.getcwd()), "Stronghold_Crusader_Extreme.exe"), "r+b") as shc:
         shc.seek(0)
-        shc.seek(int("0x7B6025", 16))
+        shc.seek(int("0x7BE025", 16))
         for i in range(0xB):
             shc.write((0x90).to_bytes(1, byteorder='little'))
 
@@ -338,16 +338,16 @@ def install_tax_change():
         0x8B, 0x06,
         0x83, 0xF8, 0x03,
 
-        0xE9, 0x60, 0x51, 0x4D, 0xFD, #45C1B0
+        0xE9, 0x60, 0xD1, 0x4C, 0xFD, #45C1B0
     ]
 
     with open(os.path.join(os.path.dirname(os.getcwd()), "Stronghold_Crusader_Extreme.exe"), "r+b") as shc:
         shc.seek(0)
-        shc.seek(int("0x7B6030", 16))
+        shc.seek(int("0x7BE030", 16))
         for elem in zero_tax_instructions:
             shc.write(int(str(elem)).to_bytes(1, byteorder='little'))
 
-    position = 0x2F87030 - 0x45C1B0
+    position = 0x2F8F030 - 0x45C1B0
 
     with open(os.path.join(os.path.dirname(os.getcwd()), "Stronghold_Crusader_Extreme.exe"), "r+b") as shc:
         shc.seek(0)
@@ -357,7 +357,7 @@ def install_tax_change():
 
     with open(os.path.join(os.path.dirname(os.getcwd()), "Stronghold_Crusader_Extreme.exe"), "r+b") as shc:
         shc.seek(0)
-        shc.seek(int("0x7B6050", 16))
+        shc.seek(int("0x7BE050", 16))
         for i in range(0xFB0):
             shc.write((0x90).to_bytes(1, byteorder='little'))
 
@@ -369,17 +369,17 @@ def uninstall_tax_change():
     with open(os.path.join(os.path.dirname(os.getcwd()), "Stronghold_Crusader_Extreme.exe"), "r+b") as shc:
         shc.seek(0)
         shc.seek(int("0x168", 16))
-        shc.write((0x2F87000).to_bytes(4, byteorder='little'))
+        shc.write((0x2F8E000).to_bytes(4, byteorder='little'))
 
     with open(os.path.join(os.path.dirname(os.getcwd()), "Stronghold_Crusader_Extreme.exe"), "r+b") as shc:
         shc.seek(0)
         shc.seek(int("0x2B9", 16))
-        shc.write((0xE0).to_bytes(1, byteorder='little'))
+        shc.write((0x50).to_bytes(1, byteorder='little'))
 
     with open(os.path.join(os.path.dirname(os.getcwd()), "Stronghold_Crusader_Extreme.exe"), "r+b") as shc:
         shc.seek(0)
         shc.seek(int("0x2C1", 16))
-        shc.write((0xE0).to_bytes(1, byteorder='little'))
+        shc.write((0x50).to_bytes(1, byteorder='little'))
     
 
     # Undo tax reset change
