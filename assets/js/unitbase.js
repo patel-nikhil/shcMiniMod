@@ -358,7 +358,7 @@ unitBaseStats =
         "stone_damage": 5000
     },
     {
-        "description": "Dog",
+        "description": "Hunter dog",
         "health": 3000,
         "arrow_damage": 15000,
         "xbow_damage": 15000,

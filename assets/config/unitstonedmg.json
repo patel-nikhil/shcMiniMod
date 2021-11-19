@@ -306,7 +306,7 @@
         "value": 5000
     },
     {
-        "description": "stone_dmgdog",
+        "description": "stone_dmghunterdog",
         "address": "0x74ee40",
         "size": 4,
         "value": 5000

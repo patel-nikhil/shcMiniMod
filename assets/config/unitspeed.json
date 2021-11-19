@@ -306,7 +306,7 @@
         "value": 3
     },
     {
-        "description": "speed_dog",
+        "description": "speed_hunterdog",
         "address": "0x74e800",
         "size": 4,
         "value": 1

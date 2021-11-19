@@ -306,7 +306,7 @@
         "value": 15000
     },
     {
-        "description": "xbow_dmgdog",
+        "description": "xbow_dmghunterdog",
         "address": "0x74ef80",
         "size": 4,
         "value": 15000
