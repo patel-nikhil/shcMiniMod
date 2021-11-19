@@ -77,11 +77,11 @@ def install():
                             uninstall[str(size)][str(address)] = read(shc, address, size)
                         write(shc, address, current_unit["xbowDamage"], size)
 
-                    if "arrowDamage" in current_unit.keys():
-                        address = get_unit_arrow_dmg_address(key)
+                    if "stoneDamage" in current_unit.keys():
+                        address = get_unit_stone_dmg_address(key)
                         if str(address) not in uninstall[str(size)]:
                             uninstall[str(size)][str(address)] = read(shc, address, size)
-                        write(shc, address, current_unit["arrowDamage"], size)
+                        write(shc, address, current_unit["stoneDamage"], size)
                     
                     if "meleeDamageVs" in current_unit.keys():
                         for defender in current_unit["meleeDamageVs"]:
