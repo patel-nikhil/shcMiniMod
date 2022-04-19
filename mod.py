@@ -255,7 +255,10 @@ def read(shc, address, size):
 def write(shc, address, value, size):
     shc.seek(0)
     shc.seek(address)
-    shc.write(int(value).to_bytes(size, byteorder='little'))
+    try:
+        shc.write(int(value).to_bytes(size, byteorder='little'))
+    except ValueError:
+        shc.write(int(value, base=16).to_bytes(size, byteorder='little'))
     # print(size, address, value)
 
 
