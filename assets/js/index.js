@@ -1,3 +1,5 @@
+import { loadBuildings } from './upload/buildings.js';
+
 window.onload = function(e){
     $("#buildingtable").html(loadBuildingTable());
     $("#resourcetable").html(loadResourceTable());
@@ -5,11 +7,11 @@ window.onload = function(e){
     $("#unitmeleetable").html(loadUnitMeleeTable());
 
     $("#global-reset").on("click", function(e){
-        document.querySelectorAll(".btn").forEach(btn => {
-            if (btn != this && (btn.classList.contains("building") || btn.classList.contains("unitbase") || btn.classList.contains("unitmelee"))){
-                btn.click();
-            }
-        })
+        $("#reset_progress")[0].style.display = 'block';
+        $("input").each(function(idx, item){ item.disabled = true });
+        $("input").each(function(idx, item){ item.value = item.placeholder });
+        $("input").each(function(idx, item){ item.disabled = false });
+        $("#reset_progress")[0].style.display = 'none';
     });
 
     $("#btnCrusader").on("click", function(){
@@ -117,7 +119,27 @@ window.onload = function(e){
             alert("No values were changed");
         }
     });
+
+
+    $("#upload").on("click", function(){
+        $("#file_upload").on("change", function(){
+            var reader = new FileReader();
+            reader.onload = function(e)
+            {
+                var config = JSON.parse(e.target.result);
+                loadConfig(config);
+            };
+            reader.readAsText(this.files[0]);
+        })
+        $("#file_upload").click();
+    });
 }
+
+function loadConfig(uploadConfig) {
+    $("#global-reset").click();
+    loadBuildings(uploadConfig);
+}
+
 
 function arraysEqual(a, b) {
     if (a === b) return true;
