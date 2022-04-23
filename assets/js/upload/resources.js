@@ -1,5 +1,4 @@
 export function loadResources(uploadConfig) {
-    console.log("test");
     var uploadResources = uploadConfig["resources"];
     if (uploadResources) {
         Object.keys(uploadResources).forEach(function(resourceName){
