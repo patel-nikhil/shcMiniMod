@@ -1,4 +1,5 @@
 import { loadBuildings } from './upload/buildings.js';
+import { loadResources } from './upload/resources.js';
 
 window.onload = function(e){
     $("#buildingtable").html(loadBuildingTable());
@@ -138,6 +139,7 @@ window.onload = function(e){
 function loadConfig(uploadConfig) {
     $("#global-reset").click();
     loadBuildings(uploadConfig);
+    loadResources(uploadConfig);
 }
 
 
