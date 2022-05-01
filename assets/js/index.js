@@ -3,6 +3,7 @@ import { loadResources } from './upload/resources.js';
 import { loadUnitBase } from './upload/unitbase.js';
 import { loadUnitMelee } from './upload/unitmelee.js';
 
+
 window.onload = function(e){
     $("#buildingtable").html(loadBuildingTable());
     $("#resourcetable").html(loadResourceTable());
@@ -147,39 +148,7 @@ function loadConfig(uploadConfig) {
 }
 
 
-function arraysEqual(a, b) {
-    if (a === b) return true;
-    if (a == null || b == null) return false;
-    if (a.length !== b.length) return false;
-  
-    // If you don't care about the order of the elements inside
-    // the array, you should sort both arrays here.
-    // Please note that calling sort on an array will modify that array.
-    // you might want to clone your array first.
-  
-    for (var i = 0; i < a.length; ++i) {
-      if (a[i] !== b[i]) return false;
-    }
-    return true;
-  }
-
-  function arrayFunctionEqual(a, b) {
-    if (a === b) return true;
-    if (a == null || b == null) return false;
-    if (a.length !== b.length) return false;
-  
-    // If you don't care about the order of the elements inside
-    // the array, you should sort both arrays here.
-    // Please note that calling sort on an array will modify that array.
-    // you might want to clone your array first.
-  
-    for (var i = 0; i < a.length; ++i) {
-      if (a[i]() !== b[i]()) return false;
-    }
-    return true;
-  }
-
-  function download(data, filename, type) {
+function download(data, filename, type) {
     var file = new Blob([data], {type: type});
     if (window.navigator.msSaveOrOpenBlob) // IE10+
         window.navigator.msSaveOrOpenBlob(file, filename);
